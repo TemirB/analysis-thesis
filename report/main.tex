@@ -1,9 +1,28 @@
 \documentclass{extarticle}
 
-\usepackage{lineno}
-\usepackage[T2A]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[russian]{babel}
+\usepackage{fontspec}
+
+\usepackage{polyglossia}
+\setdefaultlanguage[indentfirst=true,forceheadingpunctuation=false]{russian}
+\setotherlanguages{english}
+
+\IfFontExistsTF{Times New Roman}
+{\setmainfont{Times New Roman}
+\newfontfamily\cyrillicfont{Times New Roman}[Script=Cyrillic]}
+{\setmainfont[Script=Cyrillic]{FreeSerif}}
+
+\IfFontExistsTF{Courier New}
+{\setmonofont{Courier New}
+\newfontfamily\cyrillicfonttt{Courier New}[Script=Cyrillic]
+}
+{\setmonofont[Script=Cyrillic]{FreeMono}}
+
+\IfFontExistsTF{Arial}
+{\setsansfont{Arial}
+\newfontfamily\cyrillicfontsf{Arial}[Script=Cyrillic]
+}
+{\setsansfont[Script=Cyrillic]{FreeSans}}
+
 \usepackage{amsmath, amsfonts, amssymb}
 \usepackage{float}
 \usepackage{wrapfig}
@@ -16,8 +35,9 @@
 \usepackage{indentfirst}
 \usepackage{subcaption}
 \usepackage[style=gost-numeric, backend=biber]{biblatex}
-
 \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+
+\usepackage{lineno}
 
 \addbibresource{references.bib}
 
@@ -37,7 +57,7 @@
             \vspace{6cm}
             ОТЧЕТ ПО НАУЧНО-ИССЛЕДОВАТЕЛЬСКОЙ РАБОТЕ 
             
-            НАПРАВЛЕНИЕ 03.04.02 \"ФИЗИКА\"
+            НАПРАВЛЕНИЕ 03.04.02 "ФИЗИКА"
             
             СЕМЕСТР 09
         \end{center}
@@ -81,9 +101,12 @@
         \end{center}
 
     \end{titlepage}
+
 \tableofcontents
+
 \newpage
-\linenumbers{}
+\linenumbers
+
 \section{Введение}
     Изучение свойств сильно взаимодействующей материи в условиях экстремальных плотностей и температур 
     является одной из центральных задач современной физики высоких энергий. 
@@ -427,7 +450,7 @@
                     при чтении заголовка \texttt{\# event \ldots end} 
                     производится окончательная обработка частиц из буфера \texttt{out}:
                     \begin{itemize}
-                        \item \textbf{Спектаторы:} 
+                        \item \textbf{Спектаторы:}
                             частицы, присутствующие в конечном состоянии, 
                             но отсутствующие в буфере \texttt{interactions} 
                             (при условии $\text{ID} < 394$), помечаются как спектаторы. 
@@ -458,19 +481,19 @@
                     \BlankLine
                 \ForEach{строка $L$ во входном файле}{
                     \If{$L$ начинается с \texttt{'\#'}}{
-                        \If{$L$ содержит \texttt{\"interaction\"}}{
+                        \If{$L$ содержит \texttt{"interaction"}}{
                             \While{чтение строк с частицами}{
                                 извлечь частицу $p$\;
                                 $\text{interactions}[p.\text{ID}] \leftarrow p$\;
                             }
                         }
-                        \ElseIf{$L$ содержит \texttt{\"event \ldots out\"}}{
+                        \ElseIf{$L$ содержит \texttt{"event \ldots out"}}{
                             распарсить $nPart$\;
                             \If{$nPart == N_{\text{init}}$}{
                                 $\text{isElastic} \leftarrow \text{true}$\;
                             }
                         }
-                        \ElseIf{$L$ содержит \texttt{\"event \ldots end\"}}{
+                        \ElseIf{$L$ содержит \texttt{"event \ldots end"}}{
                             распарсить $\text{impactParameter}$\;
                             \If{$\text{isElastic} == \text{true}$}{
                                 $\text{impactParameter} \leftarrow -1$\;
@@ -513,7 +536,7 @@
 
         \subsubsection{Проверка корректности конвертера}
 
-            Для валидации алгоритма конвертации было сгенерировано тестовое событие 
+            Для валидации алгоритма конвертации было сгенерировано тестовое событие
             с сидом \texttt{2884011568699097786} в двух форматах: \texttt{Root} и \texttt{Oscar2013}. 
             Файл в формате \texttt{Root} использовался как эталонный результат генератора \texttt{SMASH}, 
             тогда как файл \texttt{Oscar2013} подвергался обработке описанным выше конвертером.
@@ -601,7 +624,7 @@
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[width=0.8\linewidth]{cfs_pos_0-10_0.00_0.20.pdf}
+                \includegraphics[width=0.8\linewidth]{images/cfs_pos_0-10_0.00_0.20.pdf}
                 \caption{
                     Проекции кореляционных функций с наложенным фитом для $\pi^+$
                 }
@@ -609,7 +632,7 @@
 
             \begin{figure}[H]
                 \centering
-                \includegraphics[width=0.8\linewidth]{cfs_neg_0-10_0.00_0.20.pdf}
+                \includegraphics[width=0.8\linewidth]{images/cfs_neg_0-10_0.00_0.20.pdf}
                 \caption{
                     Проекции кореляционных функций с наложенным фитом для $\pi^-$
                 }
@@ -655,7 +678,7 @@
             Можно заметить, что похожее поведение имеет и график для $\lambda$.
 
             Также, анализ показывает, рост недиагонального радиуса $R_{out-long}$. 
-            Это объясняется \"поворотом\" 2-х мерной проекции
+            Это объясняется "поворотом" 2-х мерной проекции
             кореляционной функции в проекции \texttt{out-long}
 
             \begin{figure}[H]
@@ -677,7 +700,7 @@
             \begin{figure}[H]
                 \centering
                 \includegraphics[width=\linewidth]{images/all_out-long_2d_histos_centr_10-30_neg.pdf}
-                \caption{\"Поворот\" проекций кореляционной функции для различных классов центральности $\pi^{-}$}
+                \caption{"Поворот" проекций кореляционной функции для различных классов центральности $\pi^{-}$}
             \end{figure}
 
         \subsubsection{Отношение проекций кореляционных функций}
