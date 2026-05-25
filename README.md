@@ -15,5 +15,4 @@ To remove them, use:
 ## Требования
 Проект использует linux пакет `texlive-full`
 
-
- 
+latexmk -xelatex -bibtex main.tex
