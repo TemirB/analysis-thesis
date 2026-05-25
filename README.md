@@ -12,10 +12,6 @@
 LaTeX generates a lot of auxiliary files during compilation.  
 To remove them, use:
 
-```bash
-./delete.sh [directory]
-```
-
 ## Требования
 Проект использует linux пакет `texlive-full`
 
