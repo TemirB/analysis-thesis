@@ -12,3 +12,6 @@ build/
 */*.run.xml
 */*.toc
 */*.xdv
+*/*.xwm
+*/*.snm
+*/*.nav
