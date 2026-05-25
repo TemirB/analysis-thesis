@@ -5,3 +5,7 @@ build/
 */*.fdb_latexmk
 */*.fls
 */*.log
+*/*.out
+*/*.bcf
+*/*.run.xml
+*/*.toc
