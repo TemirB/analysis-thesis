@@ -1,0 +1,21 @@
+\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {1}Введение}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Цели и задачи работы}{2}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Теоретические основы фемтоскопии}{3}{section.2}%
+\contentsline {section}{\numberline {3}Модель SMASH}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Физическая основа}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Спектр частиц и взаимодействия}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Области применения}{5}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Применение модели \texttt {SMASH} в данной работе}{5}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Параметры столкновения}{6}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Параметры эволюции системы}{6}{subsubsection.3.4.2}%
+\contentsline {section}{\numberline {4}Практические результаты работы}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Проверка корректности извлечение информации о кинетическом вымораживании}{6}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Описание алгоритма}{6}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Проверка корректности конвертера}{8}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Составление и анализ зависимотси радиусов и силы корреляции от быстроты}{11}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Аппроксимация гистограмм}{12}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Анализ зависимости радиусов и силы корреляции}{13}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Отношение проекций кореляционных функций}{19}{subsubsection.4.2.3}%
+\contentsline {section}{\numberline {5}Заключение}{20}{section.5}%
+\contentsline {chapter}{Литература}{22}{Item.7}%
